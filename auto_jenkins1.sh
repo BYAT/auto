@@ -1,2 +1,2 @@
-java -jar jenkins-cli.jar -s http://${JENKINS_SERVICE_HOST}/jenkins/ -webSocket install-plugin publish-over-ssh
+java -jar jenkins-cli.jar -s http://15.185.130.216/jenkins/ -webSocket install-plugin git
 
