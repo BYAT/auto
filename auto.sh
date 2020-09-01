@@ -1,5 +1,6 @@
-java -jar jenkins-cli.jar -s http://${JENKINS_SERVICE_HOST}/jenkins/ -webSocket install-plugin github-pullrequest
-java -jar jenkins-cli.jar -s http://${JENKINS_SERVICE_HOST}/jenkins/ -webSocket create-job department-service < department-service.xml
+myip="$(dig +short myip.opendns.com @resolver1.opendns.com)"
+java -jar jenkins-cli.jar -s http://${myip}/jenkins/ -webSocket install-plugin github-pullrequest
+java -jar jenkins-cli.jar -s http://${myip}/jenkins/ -webSocket create-job department-service < department-service.xml
 java -jar jenkins-cli.jar -s http://${JENKINS_SERVICE_HOST}/jenkins/ -webSocket create-job office-service < office-service.xml
 java -jar jenkins-cli.jar -s http://${JENKINS_SERVICE_HOST}/jenkins/ -webSocket create-job person-service < person-service.xml
 java -jar jenkins-cli.jar -s http://${JENKINS_SERVICE_HOST}/jenkins/ -webSocket create-job project-assessment-site < project-assessment-site.xml
